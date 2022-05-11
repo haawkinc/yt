@@ -39,6 +39,14 @@ module Yt
         @ownership_effective ||= Yt::Models::Ownership.new data: @data.fetch('ownershipEffective', {})
       end
 
+      def match_policy_mine
+        @match_policy_mine ||= Yt::Models::MatchPolicy.new data: @data.fetch('matchPolicyMine', {})
+      end
+
+      def match_policy_effective
+        @match_policy_effective ||= Yt::Models::MatchPolicy.new data: @data.fetch('matchPolicyEffective', {})
+      end
+
       # Soft-deletes the asset.
       # @note YouTube API does not provide a +delete+ method for the Asset
       #   resource, but only an +update+ method. Updating the +status+ of a

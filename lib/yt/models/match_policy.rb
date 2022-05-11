@@ -9,12 +9,21 @@ module Yt
       def initialize(options = {})
         @asset_id = options[:asset_id]
         @auth = options[:auth]
+        @data = options[:data]
       end
 
       def update(attributes = {})
         underscore_keys! attributes
         do_update body: attributes.slice(:policy_id)
         true
+      end
+
+      def policy_id
+        @data['policyId']
+      end
+
+      def rules
+        @data['rules']
       end
 
     private
