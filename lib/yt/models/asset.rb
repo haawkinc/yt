@@ -35,6 +35,10 @@ module Yt
         @metadata_effective ||= Yt::Models::AssetMetadata.new data: @data.fetch('metadataEffective', {})
       end
 
+      def ownership_mine
+        @ownership_mine ||= Yt::Models::Ownership.new data: @data.fetch('ownershipMine', {})
+      end
+
       def ownership_effective
         @ownership_effective ||= Yt::Models::Ownership.new data: @data.fetch('ownershipEffective', {})
       end
