@@ -14,7 +14,7 @@ module Yt
 
       def update(attributes = {})
         underscore_keys! attributes
-        do_update body: attributes.slice(:policy_id)
+        do_update body: attributes.slice(:policy_id, :rules)
         true
       end
 
