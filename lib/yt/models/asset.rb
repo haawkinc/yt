@@ -83,6 +83,10 @@ module Yt
       #   to download reports, or to filter YouTube Analytics.
       has_attribute :label, default: []
 
+
+      # @return [Array<String>] the list of asset IDs if asset is a merged asset.
+      has_attribute :alias_id, default: []
+
 # Status
 
       # Returns the asset’s status.
