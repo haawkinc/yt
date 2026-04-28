@@ -10,7 +10,7 @@ module Yt
 
       has_attribute :id
       has_attribute :start_time, type: Time
-      has_attribute :end_time, type: Time
+      has_attribute :create_time, type: Time
       has_attribute :download_url
 
       # @private

@@ -16,8 +16,12 @@ module Yt
         super.tap do |params|
           params[:host] = 'youtubereporting.googleapis.com'
           params[:path] = "/v1/jobs"
-          params[:params] = {on_behalf_of_content_owner: @parent.owner_name}
+          params[:params] = jobs_params
         end
+      end
+
+      def jobs_params
+        apply_where_params! on_behalf_of_content_owner: @auth.owner_name
       end
 
       def items_key
