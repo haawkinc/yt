@@ -43,6 +43,11 @@ module Yt
       def upc
         @data['upc']
       end
+
+      # @return [String] the artist of asset
+      def artist
+        @data['artist']
+      end
     end
   end
 end
