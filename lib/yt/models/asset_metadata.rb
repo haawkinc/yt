@@ -48,6 +48,11 @@ module Yt
       def artist
         @data['artist']
       end
+
+      # @return [String] the album of asset
+      def album
+        @data['album']
+      end
     end
   end
 end
